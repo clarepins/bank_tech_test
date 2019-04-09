@@ -26,4 +26,13 @@ describe 'BankAccount' do
                  { date: date_double, debit: 500, balance: 2500 }]
     expect(@account.statement).to eq statement
   end
+
+  it 'prints a formatted statement' do
+    @account.deposit(3000, date_double)
+    @account.withdraw(500, date_double)
+    formatted_statement = "date || credit || debit || balance
+#[Double :date] || || 500.00 || 2500.00
+#[Double :date] || 3000.00 || || 3000.00"
+    expect(@account.print_statement).to eq formatted_statement
+  end
 end

@@ -7,7 +7,7 @@
 - Ruby version is 2.6.0
 - Run $`bundle`
 - Run $`rspec --init`
-- Use REPL e.g. IRP to interact with the app:
+- Use REPL e.g. IRP to interact with the app e.g. see feature test below.
 
 ### Test instructions
 - Feature tests in IRB (from root):

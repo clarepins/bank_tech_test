@@ -15,8 +15,18 @@ class BankAccount
     @statement << { date: date, debit: value, balance: find_balance - value  }
   end
 
+  def print_statement
+    f_statement = ''
+    @statement.drop(1).each do |e|
+      f_entry = "\n#{e[:date]} || %.2f" % e[:credit] + ' || || %.2f' % e[:balance] if e.key?(:credit)
+      f_entry = "\n#{e[:date]} || || %.2f" % e[:debit] + ' || %.2f' % e[:balance] if e.key?(:debit)
+      f_statement.prepend(f_entry)
+    end
+    f_statement.prepend('date || credit || debit || balance')
+  end
+
   private
-  
+
   def find_balance
     @statement[@statement.length - 1][:balance]
   end
