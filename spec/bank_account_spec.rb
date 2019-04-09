@@ -11,22 +11,16 @@ describe 'BankAccount' do
     expect(@account.statement).to eq [{ balance: 0 }]
   end
 
-  # it 'deposits and date are added to statement' do
-  #   @account.deposit(1000, date_double)
-  #   expect(@account.statement).to eq [{ date: date_double, credit: 1000 }]
-  # end
-  #
-  # it 'withdrawals and dates are added to statement' do
-  #   @account.deposit(1000, date_double)
-  #   @account.withdraw(500, date_double)
-  #   expect(@account.statement).to eq [{ date: date_double, credit: 1000 },
-  #                                     { date: date_double, debit: 500 }]
-  # end
+  it 'deposits and date are added to statement' do
+    @account.deposit(3000, date_double)
+    statement = [{ balance: 0 },
+                 { date: date_double, credit: 3000, balance: 3000 }]
+    expect(@account.statement).to eq statement
+  end
 
-  it 'calculates balance' do
+  it 'withdrawals and dates are added to statement' do
     @account.deposit(3000, date_double)
     @account.withdraw(500, date_double)
-    @account.find_balance()
     statement = [{ balance: 0 },
                  { date: date_double, credit: 3000, balance: 3000 },
                  { date: date_double, debit: 500, balance: 2500 }]

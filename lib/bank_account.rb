@@ -8,14 +8,16 @@ class BankAccount
   end
 
   def deposit(value, date = Time.new.strftime('%d/%m/%Y'))
-    @statement << { date: date, credit: value, balance: find_balance() + value }
+    @statement << { date: date, credit: value, balance: find_balance + value }
   end
 
   def withdraw(value, date = Time.new.strftime('%d/%m/%Y'))
-    @statement << { date: date, debit: value, balance: find_balance() - value  }
+    @statement << { date: date, debit: value, balance: find_balance - value  }
   end
 
+  private
+  
   def find_balance
-    @statement[@statement.length - 1 ][:balance]
+    @statement[@statement.length - 1][:balance]
   end
 end
