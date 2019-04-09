@@ -30,9 +30,17 @@ describe 'BankAccount' do
   it 'prints a formatted statement' do
     @account.deposit(3000, date_double)
     @account.withdraw(500, date_double)
-    formatted_statement = "date || credit || debit || balance
+    formatted_statement = 'date || credit || debit || balance
 #[Double :date] || || 500.00 || 2500.00
-#[Double :date] || 3000.00 || || 3000.00"
+#[Double :date] || 3000.00 || || 3000.00'
     expect(@account.print_statement).to eq formatted_statement
+  end
+
+  it 'can deal with floats' do
+    @account.deposit(3.23, date_double)
+    @account.withdraw(1.21, date_double)
+    formatted_statement = 'date || credit || debit || balance
+    #[Double :date] || 3.23 || || 3.23
+    #[Double :date] || || 1.21 || 2.02'
   end
 end
