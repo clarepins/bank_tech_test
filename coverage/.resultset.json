@@ -5,9 +5,6 @@
         1,
         null,
         1,
-        1,
-        5,
-        null,
         null,
         5,
         null,
@@ -52,6 +49,7 @@
       ],
       "/Users/student/Documents/my_projects/w_10/bank_tech_test/lib/bank_account.rb": [
         1,
+        1,
         null,
         1,
         1,
@@ -84,8 +82,38 @@
         7,
         null,
         null
+      ],
+      "/Users/student/Documents/my_projects/w_10/bank_tech_test/lib/transaction.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/student/Documents/my_projects/w_10/bank_tech_test/spec/transaction_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        2,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1554818192
+    "timestamp": 1554913593
   }
 }

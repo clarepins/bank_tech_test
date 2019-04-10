@@ -6,8 +6,7 @@
 ## Instructions for use
 - Ruby version is 2.6.0
 - Run $`bundle`
-- Run $`rspec --init`
-- Use REPL e.g. IRP to interact with the app e.g. see feature test below.
+- Use REPL e.g. IRB to interact with the app e.g. see feature test below.
 
 ### Test instructions
 - Feature tests in IRB (from root):
@@ -15,9 +14,9 @@
   - `account = BankAccount.new`
   - `account.deposit(10)`
   - `account.withdraw(5)`
-  - `acount.print_statement`
+  - `account.print_statement`
   - expect to see:
-date || credit || debit || balance
-[today's date] || || 5.00 || 5.00
-[today's date] || 10.00 || || 10.00
+    - date || credit || debit || balance
+    - [today's date] || || 5.00 || 5.00
+    - [today's date] || 10.00 || || 10.00
 - Unit tests: run $`rspec`

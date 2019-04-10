@@ -1,4 +1,5 @@
 require 'date'
+require 'transaction'
 
 class BankAccount
   attr_reader :statement
