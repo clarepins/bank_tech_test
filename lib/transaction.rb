@@ -8,8 +8,14 @@ class Transaction
     @date = date
   end
 
-  def calc_balance
-    { date: @date, transaction: @value,  balance: @current_balance + @value }
+  def store_transaction
+    calc_balance
+    { date: @date, transaction: @value, balance: calc_balance }
   end
 
+  private
+
+  def calc_balance
+    @current_balance + @value
+  end
 end
