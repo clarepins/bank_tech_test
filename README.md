@@ -12,7 +12,7 @@
 - Feature tests in IRB (from root):
   - `require './lib/bank_account.rb'`
   - `account = BankAccount.new`
-  - `account.transaction(10)`
+  - `account.add_transaction(10)`
   - `account.print_statement`
   - expect to see:
     - date || credit || debit || balance
