@@ -8,6 +8,15 @@ describe BankAccount do
     expect(subject.statement).to eq [{ balance: 0 }]
   end
 
+  it 'can instantiate a new transaction and store it' do
+    transaction_double = double(:transaction)
+    transaction_instance = double(:transaction_instance)
+    transaction_calc_balance = double({ date: date_double, transaction: 3000, balance: 3000 })
+    allow(transaction_double).to receive(:new).with(3000, 0).and_return(transaction_instance)
+    allow(transaction_instance).to receive(:calc_balance).and_return(transaction_calc_balance)
+    subject.new_transaction(3000, transaction_double)
+  end
+
   it 'deposits and date are added to statement' do
     subject.deposit(3000, date_double)
     statement = [{ balance: 0 },

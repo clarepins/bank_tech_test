@@ -8,6 +8,10 @@ class BankAccount
     @statement = [{ balance: 0 }]
   end
 
+  def new_transaction(value, transaction_class = Transaction)
+    @statement << transaction_class.new(value, find_balance).calc_balance
+  end
+
   def deposit(value, date = Time.new.strftime('%d/%m/%Y'))
     @statement << { date: date, credit: value, balance: find_balance + value }
   end
