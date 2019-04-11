@@ -1,14 +1,13 @@
 require 'date'
 
 class Transaction
-
   def initialize(value, current_balance, date = Time.new.strftime('%d/%m/%Y'))
     @value = value
     @current_balance = current_balance
     @date = date
   end
 
-  def store_transaction
+  def store
     calc_balance
     { date: @date, transaction: @value, balance: calc_balance }
   end

@@ -2,14 +2,12 @@ require './lib/transaction.rb'
 require './lib/statement.rb'
 
 class BankAccount
-  attr_reader :transaction_history
-
   def initialize
     @transaction_history = [{ balance: 0 }]
   end
 
   def add_transaction(value, transaction_class = Transaction)
-    @transaction_history << transaction_class.new(value, current_balance).store_transaction
+    @transaction_history << transaction_class.new(value, current_balance).store
   end
 
   def print_statement(statement_class = Statement)
