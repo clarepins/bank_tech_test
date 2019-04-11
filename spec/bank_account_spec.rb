@@ -2,8 +2,6 @@ require 'bank_account'
 
 describe BankAccount do
 
-  let(:date_double) { double :date }
-
   it 'intitializes with a balance of zero' do
     expect(subject.statement).to eq [{ balance: 0 }]
   end
@@ -11,7 +9,7 @@ describe BankAccount do
   it 'can instantiate a new transaction and store it' do
     transaction_double = double(:transaction)
     transaction_instance = double(:transaction_instance)
-    transaction_calc_balance = double ({ date: date_double, transaction: 3000, balance: 3000 })
+    transaction_calc_balance = double ({ date: '01/01/2019', transaction: 3000, balance: 3000 })
     allow(transaction_double).to receive(:new).with(3000, 0).and_return(transaction_instance)
     allow(transaction_instance).to receive(:store_transaction).and_return(transaction_calc_balance)
     subject.new_transaction(3000, transaction_double)

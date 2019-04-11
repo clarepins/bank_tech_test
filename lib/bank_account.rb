@@ -1,5 +1,5 @@
-require 'date'
 require './lib/transaction.rb'
+require './lib/statement.rb'
 
 class BankAccount
   attr_reader :statement
