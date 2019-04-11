@@ -9,13 +9,17 @@
 - Use REPL e.g. IRB to interact with the app e.g. see feature test below.
 
 ### Test instructions
-- Feature tests in IRB (from root):
+- Feature tests in IRB (from root), also [`feature_test_spec.rb`](https://github.com/clarepins/bank_tech_test/blob/master/spec/feature_test_spec.rb):
   - `require './lib/bank_account.rb'`
   - `account = BankAccount.new`
-  - `account.add_transaction(10)`
+  - `account.add_transaction(1000)`
+  - `account.add_transaction(2000)`
+  - `account.add_transaction(-500)`
   - `account.print_statement`
   - expect to see:
     - date || credit || debit || balance
-    - [today's date] || || 5.00 || 5.00
-    - [today's date] || 10.00 || || 10.00
+    - 14/01/2012 || || 500.00 || 2500.00
+    - 13/01/2012 || 2000.00 || || 3000.00
+    - 10/01/2012 || 1000.00 || || 1000.00
 - Unit tests: run $`rspec`
+- all tests pass with 100% test coverage.

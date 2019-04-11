@@ -4,18 +4,22 @@ class Statement
   end
 
   def print
-    formatted_statement = ''
-    @transaction_history.drop(1).each do |entry|
-      formatted_statement.prepend(format_entry(entry))
-    end
-    formatted_statement.prepend('date || credit || debit || balance')
+    format_statement.prepend('date || credit || debit || balance')
   end
 
   private
 
-  def format_entry(e) 
-    "\n" + e[:date] + format(e[:transaction]) + ' ||' + format(e[:balance]) if e[:transaction].positive?
-    "\n" + e[:date] + ' ||' + format(e[:transaction] * -1) + format(e[:balance]) if e[:transaction].negative?
+  def format_statement
+    statement_string = ''
+    @transaction_history.drop(1).each do |entry|
+      statement_string.prepend(format_entry(entry))
+    end
+    statement_string
+  end
+
+  def format_entry(e)
+    return "\n" + e[:date] + format(e[:transaction]) + ' ||' + format(e[:balance]) if e[:transaction].positive?
+    return "\n" + e[:date] + ' ||' + format(e[:transaction] * -1) + format(e[:balance]) if e[:transaction].negative?
   end
 
   def format(value)
