@@ -23,3 +23,7 @@
     - 10/01/2012 || 1000.00 || || 1000.00
 - Unit tests: run $`rspec`
 - all tests pass with 100% test coverage.
+
+### Diagram of model
+I drew this diagram to help me map out how classes would interact when I broke 1 class into 3. 
+![](https://github.com/clarepins/bank_tech_test/blob/master/bank_account_diagram.JPG)
