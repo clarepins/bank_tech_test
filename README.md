@@ -7,7 +7,7 @@
 * Deposits, withdrawal.
 * Account statement (date, amount, balance) printing.
 * Data can be kept in memory (it doesn't need to be stored to a database or anything).
-- Full spec [here](https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md).
+* Full spec [here](https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md).
 
 ## Acceptance criteria
 **Given** a client makes a deposit of 1000 on 10-01-2012  
