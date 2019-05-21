@@ -1,6 +1,6 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/70ad0217d63f10aac886/maintainability)](https://codeclimate.com/github/ryandav/ruby_types/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/70ad0217d63f10aac886/maintainability)](https://codeclimate.com/github/clarepins/bank_tech_test/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/70ad0217d63f10aac886/test_coverage)](https://codeclimate.com/github/ryandav/ruby_types/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/70ad0217d63f10aac886/test_coverage)](https://codeclimate.com/github/clarepins/bank_tech_test/test_coverage)
 
 # Bank tech test
 
