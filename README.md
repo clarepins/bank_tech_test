@@ -1,6 +1,4 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/70ad0217d63f10aac886/maintainability)](https://codeclimate.com/github/clarepins/bank_tech_test/maintainability)
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/70ad0217d63f10aac886/test_coverage)](https://codeclimate.com/github/clarepins/bank_tech_test/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4e473be6b5cb29fe46a2/maintainability)](https://codeclimate.com/github/clarepins/bank_tech_test/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/4e473be6b5cb29fe46a2/test_coverage)](https://codeclimate.com/github/clarepins/bank_tech_test/test_coverage)
 
 # Bank tech test
 
@@ -11,7 +9,7 @@
 * Deposits, withdrawal.
 * Account statement (date, amount, balance) printing.
 * Data can be kept in memory (it doesn't need to be stored to a database or anything).
-- Full spec [here](https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md).
+* Full spec [here](https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md).
 
 ## Acceptance criteria
 **Given** a client makes a deposit of 1000 on 10-01-2012  
