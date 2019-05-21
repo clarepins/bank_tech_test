@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/4e473be6b5cb29fe46a2/maintainability)](https://codeclimate.com/github/clarepins/bank_tech_test/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/4e473be6b5cb29fe46a2/test_coverage)](https://codeclimate.com/github/clarepins/bank_tech_test/test_coverage)
+
 # Bank tech test
 
 - This test focuses on code quality, TDD and OOD principles.
