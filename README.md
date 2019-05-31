@@ -44,4 +44,4 @@ date || credit || debit || balance
 
 ### Diagram of model
 I drew this diagram to help me map out how classes would interact when I broke 1 class into 3. It may help you understand class structure.
-![](https://github.com/clarepins/bank_tech_test/blob/master/bank_account_diagram.JPG)
+![Sequence diagram](bank_account_diagram.jpeg)
